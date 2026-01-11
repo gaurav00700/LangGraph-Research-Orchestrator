@@ -1,5 +1,5 @@
 [project]
-name = "vibe-agentic-app"
+name = "LangGraph-Research-Orchestrator"
 version = "0.1.0"
 description = "Agentic Research Assistant Web App"
 readme = "README.md"

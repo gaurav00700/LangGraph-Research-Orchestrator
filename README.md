@@ -118,10 +118,10 @@ uv run streamlit run src/client/app.py
 **Step C: Start CLI (Alternative to UI)**
 ```bash
 # Start a new session
-uv run python src/scripts/cli.py
+uv run python src/scripts/chatbot_cli.py
 
 # Resume an existing session
-uv run python src/scripts/cli.py --session-id <YOUR_SESSION_ID>
+uv run python src/scripts/chatbot_cli.py --session-id <YOUR_SESSION_ID>
 ```
 
 ### 4. Data Ingestion (Manual)

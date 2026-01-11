@@ -1,4 +1,4 @@
-(LangGraph-Research-Orchestrator) PS C:\Users\Gaurav\Desktop\Work\LangGraph-Research-Orchestrator> uv run .\scripts\cli.py --session-id 2969d054-76f6-4bb5-92a3-9df598f8cf2b
+(LangGraph-Research-Orchestrator) PS C:\Users\Gaurav\Desktop\Work\LangGraph-Research-Orchestrator> uv run .\scripts\chatbot_cli.py --session-id 2969d054-76f6-4bb5-92a3-9df598f8cf2b
 ✅ LangSmith Tracing Enabled. Project: LangGraph-Research-Orchestrator
 🚀 Mutti Agent CLI (Type 'quit' to exit)
 Resuming Session: 2969d054-76f6-4bb5-92a3-9df598f8cf2b

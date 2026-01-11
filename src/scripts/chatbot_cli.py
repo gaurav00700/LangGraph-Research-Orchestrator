@@ -26,7 +26,7 @@ async def run_cli():
     parser.add_argument("--session-id", type=str, help="Resume an existing session by ID")
     args = parser.parse_args()
 
-    print("🚀 Mutti Agent CLI (Type 'quit' to exit)")
+    print("🚀 Multi Agent CLI (Type 'quit' to exit)")
     
     if args.session_id:
         thread_id = args.session_id
