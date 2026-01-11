@@ -1,0 +1,29 @@
+[project]
+name = "vibe-agentic-app"
+version = "0.1.0"
+description = "Agentic Research Assistant Web App"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "streamlit",
+    "langgraph",
+    "langchain-core",
+    "httpx",
+    "pytest",
+    "mcp",
+    "aiosqlite",
+    "python-multipart",
+    "arxiv",
+    "python-dotenv>=1.2.1",
+    "fpdf2>=2.8.5",
+    "chromadb",
+    "langchain-chroma",
+    "tiktoken",
+    "langchain-openai>=1.1.6",
+    "langchain-ollama",
+    "langsmith",
+    "langgraph-checkpoint-sqlite>=3.0.1",
+    "grandalf>=0.8",
+]

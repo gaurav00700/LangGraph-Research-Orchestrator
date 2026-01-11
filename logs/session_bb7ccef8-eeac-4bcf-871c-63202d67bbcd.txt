@@ -1,0 +1,120 @@
+[2026-01-12 02:24:04] [SYSTEM:PLANNING]
+Details: Planner called with goal: Provide the 5 interesting research papers on NeRF, summarize the best paper, format it and save it locally.
+========================================
+[2026-01-12 02:24:04] [SYSTEM:PLAN_CREATED]
+Details: New Goal: Provide the 5 interesting research papers on NeRF, summarize the best paper, format it and save it locally.
+========================================
+[2026-01-12 02:24:33] [Researcher] [TOOL: search_arxiv] [STATUS: SUCCESS]
+Message: Output: - [Arxiv] LU-NeRF: Scene and Pose Estimation by Synchronizing Local Unposed NeRFs (Published: 2023): https://arxiv.org/pdf/2306.05410v1
+- [Arxiv] MI-NeRF: Learning a Single Face NeRF from Multiple Identities (Published: 2024): https://arxiv.org/pdf/2403.19920v2
+- [Arxiv] Block-NeRF: Scalable Large Scene Neural View Synthesis (Published: 2022): https://arxiv.org/pdf/2202.05263v1
+- [Arxiv] NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections (Published: 2024): https://arxiv...
+Arguments: {'query': 'NeRF'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher] [TOOL: get_arxiv_details] [STATUS: SUCCESS]
+Message: Output: Title: LU-NeRF: Scene and Pose Estimation by Synchronizing Local Unposed NeRFs
+
+Abstract: A critical obstacle preventing NeRF models from being deployed broadly in the wild is their reliance on accurate camera poses. Consequently, there is growing interest in extending NeRF models to jointly optimize camera poses and scene representation, which offers an alternative to off-the-shelf SfM pipelines which have well-understood failure modes. Existing approaches for unposed NeRF operate under limited...
+Arguments: {'pdf_url': 'https://arxiv.org/pdf/2306.05410v1'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher] [TOOL: get_arxiv_details] [STATUS: SUCCESS]
+Message: Output: Title: MI-NeRF: Learning a Single Face NeRF from Multiple Identities
+
+Abstract: In this work, we introduce a method that learns a single dynamic neural radiance field (NeRF) from monocular talking face videos of multiple identities. NeRFs have shown remarkable results in modeling the 4D dynamics and appearance of human faces. However, they require per-identity optimization. Although recent approaches have proposed techniques to reduce the training and rendering time, increasing the number of ide...
+Arguments: {'pdf_url': 'https://arxiv.org/pdf/2403.19920v2'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher] [TOOL: get_arxiv_details] [STATUS: SUCCESS]
+Message: Output: Title: Block-NeRF: Scalable Large Scene Neural View Synthesis
+
+Abstract: We present Block-NeRF, a variant of Neural Radiance Fields that can represent large-scale environments. Specifically, we demonstrate that when scaling NeRF to render city-scale scenes spanning multiple blocks, it is vital to decompose the scene into individually trained NeRFs. This decomposition decouples rendering time from scene size, enables rendering to scale to arbitrarily large environments, and allows per-block updat...
+Arguments: {'pdf_url': 'https://arxiv.org/pdf/2202.05263v1'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher] [TOOL: get_arxiv_details] [STATUS: SUCCESS]
+Message: Output: Title: NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections
+
+Abstract: Neural Radiance Fields (NeRFs) typically struggle to reconstruct and render highly specular objects, whose appearance varies quickly with changes in viewpoint. Recent works have improved NeRF's ability to render detailed specular appearance of distant environment illumination, but are unable to synthesize consistent reflections of closer content. Moreover, these techniques rely on large computationally...
+Arguments: {'pdf_url': 'https://arxiv.org/pdf/2405.14871v1'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher] [TOOL: get_arxiv_details] [STATUS: SUCCESS]
+Message: Output: Title: Neural Volume Rendering: NeRF And Beyond
+
+Abstract: Besides the COVID-19 pandemic and political upheaval in the US, 2020 was also the year in which neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al. (2020). Both of us have tried to capture this excitement, Frank on a blog post (Dellaert, 2020) and Yen-Chen in a Github collection (Yen-Chen, 2020). This note is an annotated bibliography of the relevant papers, and we posted the assoc...
+Arguments: {'pdf_url': 'https://arxiv.org/pdf/2101.05204v2'}
+----------------------------------------
+[2026-01-12 02:24:33] [Researcher]
+Message: 1. [LU-NeRF: Scene and Pose Estimation by Synchronizing Local Unposed NeRFs](https://arxiv.org/pdf/2306.05410v1)  
+   A critical obstacle preventing NeRF models from being deployed broadly in the wild is their reliance on accurate camera poses. Consequently, there is growing interest in extending NeRF models to jointly optimize camera poses and scene representation, which offers an alternative to off-the-shelf SfM pipelines which have well-understood failure modes. Existing approaches for unposed NeRF operate under limited assumptions, such as a prior pose distribution or coarse pose initialization, making them less effective in a general setting. In this work, we propose a novel approach, LU-NeRF, that jointly estimates camera poses and neural radiance fields with relaxed assumptions on pose configuration. Our approach operates in a local-to-global manner, where we first optimize over local subsets of the data, dubbed mini-scenes. LU-NeRF estimates local pose and geometry for this challenging few-shot task. The mini-scene poses are brought into a global reference frame through a robust pose synchronization step, where a final global optimization of pose and scene can be performed. We show our LU-NeRF pipeline outperforms prior attempts at unposed NeRF without making restrictive assumptions on the pose prior. This allows us to operate in the general SE(3) pose setting, unlike the baselines. Our results also indicate our model can be complementary to feature-based SfM pipelines as it compares favorably to COLMAP on low-texture and low-resolution images.
+
+2. [MI-NeRF: Learning a Single Face NeRF from Multiple Identities](https://arxiv.org/pdf/2403.19920v2)  
+   In this work, we introduce a method that learns a single dynamic neural radiance field (NeRF) from monocular talking face videos of multiple identities. NeRFs have shown remarkable results in modeling the 4D dynamics and appearance of human faces. However, they require per-identity optimization. Although recent approaches have proposed techniques to reduce the training and rendering time, increasing the number of identities can be expensive. We introduce MI-NeRF (multi-identity NeRF), a single unified network that models complex non-rigid facial motion for multiple identities, using only monocular videos of arbitrary length. The core premise in our method is to learn the non-linear interactions between identity and non-identity specific information with a multiplicative module. By training on multiple videos simultaneously, MI-NeRF not only reduces the total training time compared to standard single-identity NeRFs, but also demonstrates robustness in synthesizing novel expressions for any input identity. We present results for both facial expression transfer and talking face video synthesis. Our method can be further personalized for a target identity given only a short video.
+
+3. [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263v1)  
+   We present Block-NeRF, a variant of Neural Radiance Fields that can represent large-scale environments. Specifically, we demonstrate that when scaling NeRF to render city-scale scenes spanning multiple blocks, it is vital to decompose the scene into individually trained NeRFs. This decomposition decouples rendering time from scene size, enables rendering to scale to arbitrarily large environments, and allows per-block updates of the environment. We adopt several architectural changes to make NeRF robust to data captured over months under different environmental conditions. We add appearance embeddings, learned pose refinement, and controllable exposure to each individual NeRF, and introduce a procedure for aligning appearance between adjacent NeRFs so that they can be seamlessly combined. We build a grid of Block-NeRFs from 2.8 million images to create the largest neural scene representation to date, capable of rendering an entire neighborhood of San Francisco.
+
+4. [NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections](https://arxiv.org/pdf/2405.14871v1)  
+   Neural Radiance Fields (NeRFs) typically struggle to reconstruct and render highly specular objects, whose appearance varies quickly with changes in viewpoint. Recent works have improved NeRF's ability to render detailed specular appearance of distant environment illumination, but are unable to synthesize consistent reflections of closer content. Moreover, these techniques rely on large computationally-expensive neural networks to model outgoing radiance, which severely limits optimization and rendering speed. We address these issues with an approach based on ray tracing: instead of querying an expensive neural network for the outgoing view-dependent radiance at points along each camera ray, our model casts reflection rays from these points and traces them through the NeRF representation to render feature vectors which are decoded into color using a small inexpensive network. We demonstrate that our model outperforms prior methods for view synthesis of scenes containing shiny objects, and that it is the only existing NeRF method that can synthesize photorealistic specular appearance and reflections in real-world scenes, while requiring comparable optimization time to current state-of-the-art view synthesis models.
+
+5. [Neural Volume Rendering: NeRF And Beyond](https://arxiv.org/pdf/2101.05204v2)  
+   Besides the COVID-19 pandemic and political upheaval in the US, 2020 was also the year in which neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al. (2020). Both of us have tried to capture this excitement, Frank on a blog post (Dellaert, 2020) and Yen-Chen in a Github collection (Yen-Chen, 2020). This note is an annotated bibliography of the relevant papers, and we posted the associated bibtex file on the repository.
+----------------------------------------
+[2026-01-12 02:24:35] [SYSTEM:ROUTING]
+Details: Supervisor reasoning: The research papers on NeRF have been successfully fetched, and now I need to select the most impactful one for summarization.
+Next Worker: AnalystAgent
+========================================
+[2026-01-12 02:24:35] [SYSTEM:SUPERVISOR_ROUTING]
+Details: {"next": "AnalystAgent", "active_step_index": 1, "active_step_description": "Select the most impactful paper and summarize it", "current_step_retries": 0}
+========================================
+[2026-01-12 02:24:47] [AnalystAgent]
+Message: ### ANALYSIS
+
+- **LU-NeRF**: Proposes a method for joint optimization of camera poses and scene representation, overcoming limitations of existing unposed NeRF approaches. It operates in a local-to-global manner, optimizing local subsets of data and synchronizing poses for global optimization.
+  
+- **MI-NeRF**: Introduces a unified network for modeling dynamic neural radiance fields from monocular videos of multiple identities. It reduces training time and enhances robustness in synthesizing facial expressions, allowing personalization for target identities.
+
+- **Block-NeRF**: Focuses on scalable representation of large environments by decomposing scenes into individually trained NeRFs. This approach allows for efficient rendering and updates, making it suitable for city-scale scenes.
+
+- **NeRF-Casting**: Addresses the challenge of rendering specular objects in NeRFs by using ray tracing to improve view-dependent appearance and consistent reflections, while maintaining optimization speed.
+
+- **Neural Volume Rendering**: Provides an overview of the evolution of neural volume rendering, highlighting the impact of the original NeRF paper and compiling relevant literature.
+
+### SELECTION
+
+SELECTED: **Block-NeRF: Scalable Large Scene Neural View Synthesis** - [Link](https://arxiv.org/pdf/2202.05263v1)  
+REASON: This paper presents a significant advancement in the scalability of NeRF technology, making it applicable to large-scale environments, which is crucial for practical applications.
+
+### JUSTIFICATION
+
+Block-NeRF stands out due to its innovative approach to decomposing large scenes into manageable parts, allowing for efficient rendering and updates. This scalability is essential for real-world applications, such as urban modeling and virtual reality, where large environments need to be rendered in real-time. The architectural changes proposed also enhance the robustness of NeRF against varying environmental conditions, making it a comprehensive solution for large-scale scene representation.
+
+### SUMMARY/SYNTHESIS
+
+**Block-NeRF** introduces a novel method for rendering large-scale environments using Neural Radiance Fields (NeRF). By decomposing scenes into individually trained NeRFs, it effectively decouples rendering time from scene size, allowing for scalable rendering of city-scale scenes. The paper details several architectural enhancements, including appearance embeddings and learned pose refinement, which improve the model's robustness to diverse data captured over time. The authors demonstrate the effectiveness of their approach by constructing a grid of Block-NeRFs from 2.8 million images, resulting in the largest neural scene representation to date, capable of rendering an entire neighborhood in San Francisco. This advancement not only facilitates real-time rendering of extensive environments but also allows for localized updates, making it a significant contribution to the field of neural rendering.
+
+Now, I will format this summary and save it locally.
+----------------------------------------
+[2026-01-12 02:24:49] [SYSTEM:ROUTING]
+Details: Supervisor reasoning: The summary of the selected paper, Block-NeRF, has been completed and is ready to be formatted and saved as a file.
+Next Worker: Formatter
+========================================
+[2026-01-12 02:24:49] [SYSTEM:SUPERVISOR_ROUTING]
+Details: {"next": "Formatter", "active_step_index": 2, "active_step_description": "Format and save summary as file", "current_step_retries": 0}
+========================================
+[2026-01-12 02:25:01] [Formatter] [TOOL: save_file] [STATUS: SUCCESS]
+Message: Output: File saved successfully to C:\Users\Gaurav\Desktop\Work\Interview\Sportradar\Assignment\VIBE_code_agentic_application\agent\..\output\Block-NeRF_Summary.md...
+Arguments: {'filename': 'Block-NeRF_Summary.md', 'content': "# Block-NeRF: Scalable Large Scene Neural View Synthesis\n\n## Summary\n\n**Block-NeRF** introduces a novel method for rendering large-scale environments using Neural Radiance Fields (NeRF). By decomposing scenes into individually trained NeRFs, it effectively decouples rendering time from scene size, allowing for scalable rendering of city-scale scenes. The paper details several architectural enhancements, including appearance embeddings and learned pose refinement, which improve the model's robustness to diverse data captured over time. The authors demonstrate the effectiveness of their approach by constructing a grid of Block-NeRFs from 2.8 million images, resulting in the largest neural scene representation to date, capable of rendering an entire neighborhood in San Francisco. This advancement not only facilitates real-time rendering of extensive environments but also allows for localized updates, making it a significant contribution to the field of neural rendering.\n\n## Analysis\n- **LU-NeRF**: Proposes a method for joint optimization of camera poses and scene representation, overcoming limitations of existing unposed NeRF approaches. It operates in a local-to-global manner, optimizing local subsets of data and synchronizing poses for global optimization.\n- **MI-NeRF**: Introduces a unified network for modeling dynamic neural radiance fields from monocular videos of multiple identities. It reduces training time and enhances robustness in synthesizing facial expressions, allowing personalization for target identities.\n- **Block-NeRF**: Focuses on scalable representation of large environments by decomposing scenes into individually trained NeRFs. This approach allows for efficient rendering and updates, making it suitable for city-scale scenes.\n- **NeRF-Casting**: Addresses the challenge of rendering specular objects in NeRFs by using ray tracing to improve view-dependent appearance and consistent reflections, while maintaining optimization speed.\n- **Neural Volume Rendering**: Provides an overview of the evolution of neural volume rendering, highlighting the impact of the original NeRF paper and compiling relevant literature.\n\n## Selection Justification\nBlock-NeRF stands out due to its innovative approach to decomposing large scenes into manageable parts, allowing for efficient rendering and updates. This scalability is essential for real-world applications, such as urban modeling and virtual reality, where large environments need to be rendered in real-time. The architectural changes proposed also enhance the robustness of NeRF against varying environmental conditions, making it a comprehensive solution for large-scale scene representation."}
+----------------------------------------
+[2026-01-12 02:25:01] [Formatter]
+Message: The summary of the paper "Block-NeRF: Scalable Large Scene Neural View Synthesis" has been successfully formatted and saved. 
+
+**File Name:** Block-NeRF_Summary.md  
+**Location:** C:\Users\Gaurav\Desktop\Work\Interview\Sportradar\Assignment\VIBE_code_agentic_application\agent\..\output\Block-NeRF_Summary.md  
+
+File saved successfully.
+----------------------------------------
+[2026-01-12 02:25:03] [SYSTEM:ROUTING]
+Details: Supervisor reasoning: The summary has been formatted and saved successfully, completing the target goal.
+Next Worker: FINISH
+========================================
+[2026-01-12 02:25:03] [SYSTEM:SUPERVISOR_ROUTING]
+Details: {"next": "FINISH", "active_step_index": 7, "active_step_description": "All steps are clearly completed in the message history AND the final result delivered.", "current_step_retries": 0}
+========================================
