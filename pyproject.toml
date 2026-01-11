@@ -26,4 +26,5 @@ dependencies = [
     "langsmith",
     "langgraph-checkpoint-sqlite>=3.0.1",
     "grandalf>=0.8",
+    "pypdf>=6.6.0",
 ]
